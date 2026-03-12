@@ -1,0 +1,6 @@
+test_accuracy=0.775862
+test_mae=0.224138
+predictions_csv=processed/linear-feature/linear_predictions_test.csv
+coefficients_csv=processed/linear-feature/linear_coefficients.csv
+permutation_importance_csv=processed/linear-feature/permutation_importance.csv
+confusion_matrix_csv=processed/linear-feature/confusion_matrix.csv

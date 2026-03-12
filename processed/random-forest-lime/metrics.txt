@@ -1,0 +1,2 @@
+test_accuracy=0.741379
+test_mae=0.258621

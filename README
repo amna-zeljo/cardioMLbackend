@@ -1,0 +1,10 @@
+Run
+source .venv/bin/activate
+pip install -r requirements.txt
+python "filename"
+
+For the full process run:
+python process-all.py
+python algos-all.py
+
+It might take a minute to finis

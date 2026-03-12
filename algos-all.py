@@ -1,0 +1,26 @@
+from pathlib import Path
+import subprocess
+import sys
+
+
+SCRIPTS = [
+    Path("algorithms") / "7run-xgboost.py",
+    Path("algorithms") / "8run-linear.py",
+    Path("algorithms") / "9run-random-forest.py",
+]
+
+
+def main() -> None:
+    for script in SCRIPTS:
+        if not script.exists():
+            raise FileNotFoundError(f"""Missing script: {script}""")
+
+        cmd = [sys.executable, str(script)]
+        print(f"""\nRunning: {' '.join(cmd)}""")
+        completed = subprocess.run(cmd)
+        if completed.returncode != 0:
+            raise SystemExit(f"""Script failed ({script}) with exit code {completed.returncode}""")
+
+
+if __name__ == "__main__":
+    main()
